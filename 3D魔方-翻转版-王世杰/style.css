@@ -1,0 +1,212 @@
+#cube{
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left:50%;
+  top:50%;
+  margin-left:-150px;
+  margin-top: -150px;
+  transform-style:preserve-3d;
+  transform-origin:50% 50%;
+  animation: animation 10s ease-in-out infinite;
+  transform-style:preserve-3d;
+  transform-origin:50% 50%;
+  animation: animation 10s ease-in-out infinite;
+  -webkit-transform-style:preserve-3d;
+  -webkit-transform-origin:50% 50%;
+	-webkit-animation: animation 10s ease-in-out infinite;
+	-moz-transform-style:preserve-3d;
+	-moz-transform-origin:50% 50%;
+	-moz-animation: animation 10s ease-in-out infinite;
+}
+/*定义每个小块的样式*/
+.surface{
+  width: 98px;
+  height: 98px;
+  border-radius: 10px;
+  float: left;
+  border: 1px solid black;
+}
+/*定义魔方前面的样式*/
+#front{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  transform:translateZ(150px);
+  -webkit-transform:translateZ(150px);
+  -moz-transform:translateZ(150px);
+}
+.front_surface{
+  background-color: #FF6666;
+}
+/*定义魔方下面的样式*/
+#down{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  transform:rotateX(-90deg) translateZ(150px);
+  -webkit-transform:rotateX(-90deg) translateZ(150px);
+  -moz-transform:rotateX(-90deg) translateZ(150px);
+}
+.down_surface{
+  background-color: #FFFFFF;
+}
+/*定义魔方上面的样式*/
+#up{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  transform:rotateX(90deg) translateZ(150px);
+  -webkit-transform:rotateX(90deg) translateZ(150px);
+  -moz-transform:rotateX(90deg) translateZ(150px);
+}
+.up_surface{
+  background-color: #FFFF00;
+}
+/*定义魔方左面的样式*/
+#left{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  transform:rotateY(-90deg) translateZ(150px);
+  -webkit-transform:rotateY(-90deg) translateZ(150px);
+  -moz-transform:rotateY(-90deg) translateZ(150px);
+}
+.left_surface{
+  background-color: #339999;
+}
+/*定义魔方右面的样式*/
+#right{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  transform:rotateY(90deg) translateZ(150px);
+  -webkit-transform:rotateY(90deg) translateZ(150px);
+  -moz-transform:rotateY(90deg) translateZ(150px);
+}
+.right_surface{
+  background-color: #66CC00;
+}
+/*定义魔方后面的样式*/
+#back{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  transform:rotateZ(180deg) translateZ(-150px);
+  -webkit-transform:rotateZ(180deg) translateZ(-150px);
+  -moz-transform:rotateZ(180deg) translateZ(-150px);
+}
+.back_surface{
+  background-color: #FF9900;
+}
+/*定义每个面中心的图片居中显示*/
+img{
+  margin-left: 14px;
+  margin-top: 14px;
+}
+/*定义keyframes*/
+@keyframes animation{
+  0%{
+    transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  10%{
+    transform:rotateX(90deg) rotateY(0deg)  rotateZ(0deg);
+  }
+  20%{
+    transform:rotateX(180deg) rotateY(0deg)  rotateZ(0deg);
+  }
+  30%{
+    transform:rotateX(270deg) rotateY(0deg)  rotateZ(0deg);
+  }
+  40%{
+    transform:rotateX(360deg) rotateY(0deg)  rotateZ(0deg);
+  }
+  50%{
+    transform:rotateX(360deg) rotateY(90deg)  rotateZ(0deg);
+  }
+  60%{
+    transform:rotateX(360deg) rotateY(180deg)  rotateZ(0deg);
+  }
+  70%{
+    transform:rotateX(360deg) rotateY(270deg)  rotateZ(0deg);
+  }
+  80%{
+    transform:rotateX(360deg) rotateY(360deg)  rotateZ(0deg);
+  }
+  90%{
+    transform:rotateX(360deg) rotateY(360deg)  rotateZ(0deg);
+  }
+  100%{
+    transform:rotateX(360deg) rotateY(360deg)  rotateZ(360deg);
+  }
+}
+@-webkit-keyframes animation{
+  0%{
+    -webkit-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  10%{
+    -webkit-transform:rotateX(90deg) rotateY(0deg)  rotateZ(0deg);
+  }
+  20%{
+    -webkit-transform:rotateX(180deg) rotateY(0deg)  rotateZ(0deg);
+  }
+  30%{
+    -webkit-transform:rotateX(270deg) rotateY(0deg)  rotateZ(0deg);
+  }
+  40%{
+    -webkit-transform:rotateX(360deg) rotateY(0deg)  rotateZ(0deg);
+  }
+  50%{
+    -webkit-transform:rotateX(360deg) rotateY(90deg)  rotateZ(0deg);
+  }
+  60%{
+    -webkit-transform:rotateX(360deg) rotateY(180deg)  rotateZ(0deg);
+  }
+  70%{
+    -webkit-transform:rotateX(360deg) rotateY(270deg)  rotateZ(0deg);
+  }
+  80%{
+	-webkit-transform:rotateX(360deg) rotateY(360deg)  rotateZ(0deg);
+  }
+  90%{
+    -webkit-transform:rotateX(360deg) rotateY(360deg)  rotateZ(0deg);
+  }
+  100%{
+    -webkit-transform:rotateX(360deg) rotateY(360deg)  rotateZ(360deg);
+  }
+}
+@-moz-keyframes animation{
+  0%{
+    -moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  10%{
+    -moz-transform:rotateX(90deg) rotateY(0deg)  rotateZ(0deg);
+  }
+  20%{
+    -moz-transform:rotateX(180deg) rotateY(0deg)  rotateZ(0deg);
+  }
+  30%{
+    -moz-transform:rotateX(270deg) rotateY(0deg)  rotateZ(0deg);
+  }
+  40%{
+    -moz-transform:rotateX(360deg) rotateY(0deg)  rotateZ(0deg);
+  }
+  50%{
+    -moz-transform:rotateX(360deg) rotateY(90deg)  rotateZ(0deg);
+  }
+  60%{
+    -moz-transform:rotateX(360deg) rotateY(180deg)  rotateZ(0deg);
+  }
+  70%{
+    -moz-transform:rotateX(360deg) rotateY(270deg)  rotateZ(0deg);
+  }
+  80%{
+	-moz-transform:rotateX(360deg) rotateY(360deg)  rotateZ(0deg);
+  }
+  90%{
+    -moz-transform:rotateX(360deg) rotateY(360deg)  rotateZ(0deg);
+  }
+  100%{
+    -moz-transform:rotateX(360deg) rotateY(360deg)  rotateZ(360deg);
+  }
+}
